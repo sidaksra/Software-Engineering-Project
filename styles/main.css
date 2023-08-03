@@ -1,0 +1,1749 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+/* FONT FAMILY FOR EVERY PAGE */
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+.fa-book-open-reader {
+    font-size: 1.5em;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    font-size: smaller;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                            Common Styling for LOGIN PAGE & Change Password Page
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+.error {
+    font-size: 18px;
+    color: red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+/* CSS For underline hover effect */
+.underlineHoverEffect {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    cursor: pointer;
+}
+.underlineHoverEffect::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.35s ease-out;
+}
+.underlineHoverEffect:hover::before {
+    width: 100%;
+}
+/* End of hover effect */
+
+/* ICON ON LEFT HAND */
+
+/* ACCOUNT POLICY - ON THE DN OF PAGE - TERMS AND CONDITIONS */
+.accountPolicy {
+    text-align: center;
+    font-size: small;
+}
+.accountPolicy p {
+    color: rgb(110, 110, 110);
+}
+.accountPolicy a {
+    color: rgb(0, 0, 0);
+}
+.accountPolicy a:hover {
+    color: rgb(43, 38, 28);
+}
+/* END OF ACCOUNT POLICY */
+
+/* FOR ON THE TOP NAVIGATION */
+.loginNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.loginNav .myAccount {
+    font-weight: bold;
+}
+
+.loginNav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+/* END OF NAV */
+
+/* THESE ARE THE LINK IF THE USER HAD A LOGIN PROBLEM  */
+.loginProblem {
+    margin-top: 1em;
+}
+.loginProblem a {
+    color: rgb(14, 14, 14);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 33px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+                                                END OF COMMON STYLING FOR LOGIN & PASSWORD PAGE
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         FOR LOGIN PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+.loginForm * {
+    box-sizing: border-box;
+}
+.formFill p {
+    margin-top: 0px;
+    color: #666;
+}
+.loginForm button {
+    outline: none;
+    border: none;
+    font-size: 0.8em;
+    width: 100%;
+    font-weight: bold;
+    padding: 1em 4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.loginForm button:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+.detailsEnter input {
+    border: none;
+    border-bottom: 0.1em solid black;
+    margin: 0.5em 0;
+    margin-bottom: 2em;
+    width: 100%;
+    outline-width: 0cm;
+    border-color: inherit;
+    padding: 1em;
+}
+
+/* SOCIAL MEDIA LOGIN  */
+.socialLogin a {
+    display: flex;
+    background-color: transparent;
+    height: auto;
+    text-align: center;
+    outline: none;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    line-height: 22px;
+    text-decoration: none;
+    color: black;
+    border: 0.05em solid black;
+    margin-bottom: 10px;
+    padding: 0px 22px;
+    min-height: 55px;
+    font-weight: 500;
+}
+.socialLogin a:hover {
+    background-color: #eee;
+}
+
+.socialLogin span {
+    flex-grow: 1;
+}
+
+.detailsEnter {
+    flex-basis: 70%;
+}
+.socialForm {
+    flex-basis: 30%;
+}
+.socialForm img {
+    height: 20px;
+    width: 20px;
+    margin-left: 0.2em;
+}
+.google img {
+    height: 30px;
+    width: 30px;
+    margin-left: 0;
+}
+
+#loginPage button a {
+    text-decoration: none;
+    color: rgb(242, 242, 242);
+}
+.detailsEnter select {
+    max-width: 100%;
+    padding: 0.3em;
+}
+
+/* ======================================================
+=========DESKTOP VERSION FOR LOGIN PAGE==================
+========================================================= */
+@media screen and (min-width: 1024px) {
+    .loginForm {
+        padding: 3.5em;
+    }
+
+    .loginForm h1 {
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    .loginForm h2 {
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    #loginPage .detailsEnter label {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    #loginPage .detailsEnter {
+        padding: 2em;
+    }
+    #loginPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.5em;
+        padding: 1em;
+        margin-right: 5em;
+        margin-left: 5em;
+    }
+
+    .loginForm a:hover {
+        opacity: 0.9;
+    }
+
+    .formFill {
+        display: flex;
+        align-items: center;
+        padding: 1em;
+        margin-right: 2em;
+    }
+    .makingSpace {
+        flex-direction: column;
+        align-self: stretch;
+        padding: 0px 33px;
+        box-sizing: border-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    .marginLine {
+        height: 100%;
+        width: 1px;
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: border-box;
+        background: rgb(231, 231, 231);
+    }
+    .marginOr {
+        padding: 20px;
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        font-weight: 500;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+        line-height: 16px;
+    }
+}
+
+/* ======================================================
+=========MOBILE VERSION FOR LOGIN PAGE===================
+========================================================= */
+@media screen and (max-width: 768px) {
+    .loginForm h2 {
+        text-align: center;
+    }
+
+    #loginPage .detailsEnter label {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    #loginPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formFill {
+        align-items: center;
+        padding: 1em;
+    }
+    .makingSpace {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .marginOr {
+        padding: 20px;
+        font-weight: 500;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+    }
+}
+
+/* ======================================================
+=========TABLET VERSION FOR LOGIN PAGE===================
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .loginForm h2 {
+        text-align: center;
+    }
+
+    #loginPage .detailsEnter label {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    #loginPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formFill {
+        align-items: center;
+        padding: 1em;
+    }
+    .makingSpace {
+        flex-direction: row;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        justify-content: center;
+
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .marginOr {
+        padding: 20px;
+        font-weight: 500;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+                                                         END OF LOGIN PAGE
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         FOR CHANGE PASSWORD PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Button styling */
+.changePassword button {
+    outline: none;
+    border: none;
+    font-size: 0.8em;
+    width: 100%;
+    font-weight: bold;
+    padding: 1em 4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(110, 110, 110);
+}
+.changePassword button:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+/* End of button styling */
+
+.changePassword * {
+    box-sizing: border-box;
+}
+
+.changePassword input:focus {
+    outline: none;
+}
+
+.enterForm {
+    display: flex;
+    align-items: center;
+}
+
+/* Change password form  */
+.detailsPassword input {
+    border: none;
+    border-bottom: 0.1em solid black;
+    margin-top: 0.5em;
+    font-size: 1em;
+    margin-bottom: 2em;
+    width: 100%;
+    border-bottom-color: rgb(193, 193, 193);
+    outline-width: 0cm;
+    padding-bottom: 10px;
+}
+
+.detailsPassword label {
+    font-size: small;
+    font-weight: 500;
+    color: black;
+}
+
+/* ======================================================
+=========DESKTOP VERSION FOR CHANGE PASSWORD PAGE========
+========================================================= */
+@media screen and (min-width: 1024px) {
+    .changePassword h1 {
+        margin-top: 125px;
+        margin-bottom: 0.6em;
+        font-size: 1.4em;
+    }
+
+    #resetPassPage .detailsPassword {
+        padding: 2em;
+    }
+    #resetPassPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.5em;
+        padding: 1em;
+        margin-right: 5em;
+        margin-left: 5em;
+    }
+
+    #resetPassPage p {
+        text-align: center;
+        color: rgb(110, 110, 110);
+        font-size: 0.9em;
+    }
+    #resetPassPage button a {
+        text-decoration: none;
+        color: rgb(242, 242, 242);
+    }
+
+    .changePassword a:hover {
+        opacity: 0.9;
+    }
+}
+
+/* ======================================================
+=========MOBILE VERSION FOR CHANGE PASSWORD PAGE========
+========================================================= */
+@media screen and (max-width: 768px) {
+    .changePassword h1 {
+        margin-top: 80px;
+        margin-bottom: 0.6em;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    #resetPassPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.5em;
+        padding: 1em;
+        margin-right: 5em;
+        margin-left: 5em;
+    }
+    .changePassword br {
+        display: none;
+    }
+
+    #resetPassPage p {
+        text-align: center;
+        text-align: justify;
+        text-justify: inter-word;
+        color: rgb(110, 110, 110);
+        margin-bottom: 2.5em;
+    }
+    #resetPassPage button a {
+        text-decoration: none;
+        color: rgb(242, 242, 242);
+    }
+}
+
+/* ======================================================
+=========TABLET VERSION FOR CHANGE PASSWORD PAGE=========
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .changePassword h1 {
+        margin-top: 125px;
+        margin-bottom: 0.6em;
+        font-size: 1.3em;
+    }
+
+    #resetPassPage .detailsPassword {
+        padding: 2em;
+    }
+    #resetPassPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.5em;
+        padding: 1em;
+        margin-right: 5em;
+        margin-left: 5em;
+    }
+
+    #resetPassPage p {
+        text-align: center;
+        color: rgb(110, 110, 110);
+    }
+    #resetPassPage button a {
+        text-decoration: none;
+        color: rgb(242, 242, 242);
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+                                                END OF Change Password PAGE
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         FOR DASHBOARD PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+/* This is only for dashboard page */
+.dashSideBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #11101d;
+    margin-top: 3.5em;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#popup-container {
+    background-color: #15161a;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 67%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#popup-content {
+    background-color: #e8e8e8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
+    margin: 10% auto;
+    text-align: center;
+}
+
+#close-popup {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #999;
+}
+#close-popup:hover {
+    color: white;
+}
+#CSVForm {
+    display: flex;
+    flex-direction: column;
+}
+#CSVForm div {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+input[type="file"] {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 60%;
+    margin: 20px auto;
+    display: block;
+}
+
+.btnUploadCSV {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.btnUploadCSV:hover {
+    color: black;
+}
+
+.btnUploadCSV:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.btnUploadCSV:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#CSVForm label {
+    display: block;
+    position: relative;
+    border-radius: 0.1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+#navHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    vertical-align: baseline;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+#main {
+    padding: 0%;
+    background-color: rgb(249, 249, 249);
+}
+
+#mainContent {
+    transition: margin-left 0.5s ease-in-out; /* If you want a transition effect */
+}
+
+.dashboardPage .fa-book-open-reader {
+    color: black;
+}
+
+/* For Left Menu Bar Drop Down */
+
+#mainContent {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+}
+#mySidebar {
+    width: 200px;
+}
+.sidebar {
+    margin-top: 3.5em;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #15161a;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 25px 8px 8px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #a4a6b3;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.openBtn {
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openBtn:hover {
+    opacity: 0.6;
+}
+
+.fa-th-large,
+.fa-gear,
+.fa-comment-dots,
+.fa-chart-bar {
+    margin-right: 0.5em;
+}
+/* END OF SideNav  */
+
+/* For right hand side User Account Drop Down */
+
+.accountButton:hover {
+    opacity: 0.6;
+}
+.userProfileDropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.userProfileDropdown .accountButton {
+    cursor: pointer;
+    font-size: 1.3em;
+    border: none;
+    text-decoration: none;
+    padding: 0.5em;
+    background-color: white;
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.dropAccount {
+    display: none; /* hide the dropdown menu by default */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropAccount a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropAccount a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Add a caret using the :before pseudo-element */
+.accountButton:after {
+    content: "\f0d7"; /* Unicode for fa-caret-down */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the caret when the button is active or in focus */
+.accountButton:active:after,
+.accountButton:focus:after {
+    transform: rotate(180deg);
+}
+
+.show {
+    display: block;
+}
+
+.showSetting {
+    display: block;
+}
+.showUserNames {
+    display: block;
+}
+
+/* END OF USER DROP DOWN  */
+
+/* Grettings */
+.greetingBox {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.greetingBox h1 {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textclip 15s linear infinite;
+    display: inline-block;
+    animation-iteration-count: 1;
+    margin-top: 3em;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.thisMonth:hover {
+    transform: scale(1.1);
+}
+.thisMonth {
+    transition: all 0.2s ease-in-out;
+}
+
+.prevMonth:hover {
+    transform: scale(1.1);
+}
+.prevMonth {
+    transition: all 0.2s ease-in-out;
+}
+
+.lastYear:hover {
+    transform: scale(1.1);
+}
+.lastYear {
+    transition: all 0.2s ease-in-out;
+}
+
+.thisMonthRevenue,
+.prevMonthRevenue,
+.lastYearRevenue {
+    text-transform: uppercase;
+}
+
+.thisMonth {
+    background-image: linear-gradient(#eecda3, #f086e0);
+}
+.prevMonth {
+    background-image: linear-gradient(#e2f3d6, #b3f795);
+}
+.lastYear {
+    background-image: linear-gradient(#8cdde3, #739aed);
+}
+
+.thisMonthRevenue,
+.prevMonthRevenue,
+.lastYearRevenue {
+    text-align: center;
+}
+
+/* ===============================================================
+=========DESKTOP VERSION FOR DASHBOARD MAIN PAGE==================
+==================================================================*/
+@media screen and (min-width: 1024px) {
+    .avgFigure {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        align-content: baseline;
+        margin-top: 5em;
+        margin-bottom: 3em;
+        border-radius: 0.3em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        justify-items: center;
+    }
+
+    .thisMonth,
+    .prevMonth,
+    .lastYear {
+        border: 0.1em solid black;
+        padding: 1em;
+        border: none;
+        border-radius: 0.3em;
+        width: 350px;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        box-shadow: 0px 10px 18px 0px rgba(2, 2, 2, 0.3);
+        cursor: default;
+    }
+
+    .thisMonth h2,
+    .prevMonth h2,
+    .lastYear h2 {
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .thisMonth p,
+    .prevMonth p,
+    .lastYear p {
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #5c5454;
+    }
+
+    .thisMonthRevenue,
+    .prevMonthRevenue,
+    .lastYearRevenue {
+        font-size: 48px;
+        margin-top: 10px;
+        text-align: center;
+        color: #000000;
+        font-family: "Lobster", cursive;
+        font-weight: normal;
+    }
+
+    .exclaimBox {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        border: 0.1em solid black;
+        border: none;
+        margin-top: 2.5em;
+        margin-left: 300px;
+
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+            rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        margin-right: 300px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        border-radius: 0.5em;
+    }
+
+    /* chart Image Size done */
+}
+
+/* ==============================================================
+=========MOBILE VERSION FOR DASHBOARD MAIN PAGE==================
+========================================================= */
+@media screen and (max-width: 768px) {
+    /* END OF USER DROP DOWN  */
+
+    .avgFigure {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+        border-radius: 0.3em;
+
+        padding-top: 2em;
+        padding-bottom: 2em;
+        align-items: center;
+    }
+
+    .thisMonth,
+    .prevMonth,
+    .lastYear {
+        border: 0.1em solid black;
+        padding: 1em;
+
+        margin-top: 1em;
+
+        border: none;
+        border-radius: 0.3em;
+        width: 150px;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        box-shadow: 0px 10px 18px 0px rgba(2, 2, 2, 0.3);
+        cursor: default;
+    }
+
+    .thisMonthRevenue,
+    .prevMonthRevenue,
+    .lastYearRevenue {
+        font-size: 1em;
+        font-family: "Lobster", cursive;
+        font-weight: normal;
+        color: black;
+    }
+
+    .exclaimBox {
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+
+    /* chart Image Size done */
+}
+
+/* ==============================================================
+=========TABLET VERSION FOR DASHBOARD MAIN PAGE==================
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .dropAccount {
+        margin-right: 250px;
+    }
+
+    .avgFigure {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 3em;
+        border-radius: 0.3em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .thisMonth,
+    .prevMonth,
+    .lastYear {
+        border: 0.1em solid black;
+        padding: 1em;
+        border: none;
+        border-radius: 0.3em;
+        width: 150px;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        box-shadow: 0px 10px 18px 0px rgba(2, 2, 2, 0.3);
+        cursor: default;
+    }
+
+    .thisMonthRevenue,
+    .prevMonthRevenue,
+    .lastYearRevenue {
+        font-size: 2em;
+        font-family: "Lobster", cursive;
+        font-weight: normal;
+        color: black;
+    }
+
+    .exclaimBox {
+        margin-top: 1.5em;
+        justify-content: center;
+        padding: 0 10px;
+        border: 0.1em solid black;
+        border: none;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        border-radius: 0.5em;
+    }
+
+    /* chart Image Size done */
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+                                                         END OF DASHBOARD PAGE
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         FOR DASHBOARD NUMBERS PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+.homeContent {
+    background-color: #f1f1f1;
+}
+.homeContent .dataActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.action-box input {
+    background-color: #1877f2; /* This is a modern blue color */
+    box-shadow: 0px 0px 10px 0px #ccc;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-top: 5em;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    width: 200px;
+    color: #fff; /* This is a white color for the text */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.action-box i {
+    margin-bottom: 10px;
+}
+
+.action-box input {
+    /* existing CSS styles */
+    transition: all 0.2s ease-in-out; /* Add this */
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.action-box input:hover {
+    background-color: #f6f6f6; /* Change background color on hover */
+    transform: scale(1.05); /* Add a scaling effect on hover */
+    color: #134da6; /* This is a darker blue color on hover */
+    cursor: pointer;
+}
+
+.numbersTable {
+    padding: 40px;
+}
+
+/* General table styling */
+.dataSheet {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+}
+
+/* Table header styling */
+.dataSheet th {
+    background-color: #0277bd;
+    color: white;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Table row styling */
+.dataSheet tr {
+}
+
+table tr td:first-child {
+    width: 20px;
+}
+
+/* Table data styling */
+.dataSheet td {
+    padding: 10px;
+    vertical-align: middle;
+    width: auto;
+}
+
+/* Checkbox styling */
+.dataSheet input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/* Memo styling */
+.dataSheet input[type="text"] {
+    vertical-align: middle;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+    height: 100%;
+    background-color: none;
+    outline: none;
+}
+
+/* Alternate row background color */
+.dataSheet tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.dataSheet tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+/* Caret styling for sorting */
+.dataSheet th i {
+    margin-left: 5px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.checkbox {
+    transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked {
+    transform: scale(1.1); /* Add a scaling effect when checked */
+}
+
+/* Table CSS End */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         For Schedule Report PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+.deleteSchedule {
+    cursor: pointer;
+}
+
+.logoBook {
+    padding: 1em;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         For Analysis PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+/* Global styles */
+
+#mainGraphContainer {
+    margin-top: 60px;
+}
+#mainGraphContainer h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 16px;
+}
+.GraphContainer,
+.lineGraphContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.lineGraphContainer {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.GraphContainerChild,
+.Graph3 {
+    flex: 1;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+.Graph3 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ffe033;
+}
+.Graph {
+    margin-top: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Specific styles for each graph container */
+
+#mainGraphContainer .GraphContainerChild:nth-child(1) {
+    border: 2px solid #33ccff;
+}
+
+#mainGraphContainer .GraphContainerChild:nth-child(2) {
+    border: 2px solid #ff9933;
+}
+
+#mainGraphContainer .GraphContainerChild:nth-child(3) {
+    border: 2px solid #33cc99;
+}
+
+#graphSubmit {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.chartDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.year_dropdown,
+.year_dropdown_bar2,
+#month_dropdown,
+#provider_name_dropdown {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.nameList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#barSubmit,
+#bar2Submit,
+#lineUser,
+#printbtn {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #33ccff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+#lineUserNone {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #298ee6;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#barSubmit:hover,
+#bar2Submit:hover,
+#lineUser:hover,
+#lineUserNone:hover,
+#printbtn:hover {
+    background-color: #29b6e6;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         MOBILE VERSION For Analysis PAGE
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         For Add Goal Page
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Select element style */
+.formGoal select {
+    border-radius: 4px;
+    padding: 8px 32px 8px 16px;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+/* Placeholder style */
+.formGoal select option[disabled]:first-child {
+    color: #999;
+}
+
+/* Label style */
+.formGoal label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Input field style */
+.formGoal input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Form container style */
+.formGoal {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                         For Account Page
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+.accountInfo {
+    padding: 2em;
+}
+.Acc-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+.Acc-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 2em;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+}
+
+.Acc-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Acc-container form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Add Flexbox layout for the form */
+.Acc-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style the form elements */
+.Acc-container .form-group {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Acc-container form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* This is for Side Nav Bar and Timesheet Page  */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+                                                        For Timesheet and Side Nav Bar
+----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+.sideNavList {
+    padding: 6px 14px;
+}
+
+.sideBarNav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 220px;
+    background: #11101d;
+    z-index: 99;
+}
+
+.sideBarNav .company-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 6px 14px;
+}
+
+.sideBarNav .company-details .companyName {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sideBarNav .company-details .companyName > * {
+    padding: 10px;
+}
+
+.sideNavList i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+.sideNavList {
+    margin-top: 20px;
+    height: 100%;
+}
+.sideNavList li {
+    position: relative;
+    list-style: none;
+}
+
+.sideBarNav input {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 20px 0 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #1d1b31;
+}
+
+.sideNavList a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #11101d;
+}
+.sideNavList a:hover {
+    background: #fff;
+}
+.sideNavList a .linksName {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+.sideNavList a .linksName {
+    opacity: 1;
+    pointer-events: auto;
+}
+.sideNavList a:hover .linksName,
+.sideNavList a:hover i {
+    transition: all 0.5s ease;
+    color: #11101d;
+}
+.sideNavList i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+.sideNavList li.profile {
+    height: 60px;
+    width: 100%;
+    left: 0;
+    /* Imp bottom*/
+    bottom: 0;
+    position: absolute;
+    padding: 10px 14px;
+    background: #1d1b31;
+    overflow: hidden;
+}
+
+.sideNavList li .profileInfo {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.sideNavList li.profile .name,
+.sideNavList li.profile .position {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+.sideNavList li.profile .position {
+    font-size: 12px;
+}
+.sideBarNav .profile #log_out {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #1d1b31;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+}
+.sideBarNav .profile #log_out {
+    width: 10px;
+    background: none;
+}
+.sideBarNav .profile #log_out:hover {
+    color: rgb(215, 215, 215);
+}
+/* This element (imp.) is also included in Dashboard Numbers Page in main.css */
+.homeContent {
+    position: relative;
+    background: #ebf1fb;
+    min-height: 100vh;
+    top: 0;
+    z-index: 2;
+}
+.sideBarNav ~ .homeContent {
+    left: 220px;
+    width: calc(100% - 220px);
+}
+.homeContent div {
+    display: flex;
+    flex-direction: column;
+}
+.homeContent h1 {
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px;
+}
+.homeContent .submitTimesheet {
+    height: 100%;
+    margin: 18px;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+#TimeSheetPage button {
+    outline: none;
+    border: none;
+    font-size: 0.8em;
+    width: 100%;
+    font-weight: bold;
+    padding: 1em 4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#TimeSheetPage button:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+.enterTimeInfo input,
+.enterTimeInfo select {
+    border: 0.1em solid black;
+
+    margin-bottom: 2em;
+
+    border-color: inherit;
+    padding: 0.8em;
+}
+
+#TimeSheetPage .enterTimeInfo label {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+#TimeSheetPage .enterTimeInfo {
+    padding: 2em;
+}
+
+.TimeSheetPage {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}

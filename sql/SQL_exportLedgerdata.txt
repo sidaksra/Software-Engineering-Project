@@ -1,0 +1,7 @@
+SELECT 
+Date,
+Pr,
+Total 
+FROM [ClearDent].[dbo].[Vw_Ledger] 
+WHERE Pr IS NOT NULL
+/* AND Date <= GETDATE() AND Date > DateAdd(DD,-7,GETDATE() ) */

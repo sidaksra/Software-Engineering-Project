@@ -1,0 +1,17 @@
+SELECT 
+[fld_shtAppTypeId],
+[fld_dtmStartTime],
+[fld_dtmEndTime],
+[fld_shtChId], 
+[ClearDent].[dbo].[tbl_PatInfo].[fld_strLName], 
+[ClearDent].[dbo].[tbl_PatInfo].[fld_strFName], 
+[ClearDent].[dbo].[tbl_Pr].[fld_strCode] 
+FROM [ClearDent].[dbo].[tbl_SchApp] 
+INNER JOIN [ClearDent].[dbo].[tbl_PatInfo] 
+ON [ClearDent].[dbo].[tbl_SchApp].[fld_intPatId] = [ClearDent].[dbo].[tbl_PatInfo].[fld_auto_intPatId] 
+INNER JOIN [ClearDent].[dbo].[tbl_Pr] 
+ON [ClearDent].[dbo].[tbl_SchApp].[fld_shtPrId] = [ClearDent].[dbo].[tbl_Pr].[fld_auto_shtPrId]
+/*WHERE [fld_dtmStartTime] <= GETDATE() AND [fld_dtmStartTime] > DateAdd(DD,-7,GETDATE())*/
+
+
+
